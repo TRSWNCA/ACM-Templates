@@ -11,25 +11,24 @@ int n, m, s, t, idx;
 
 int edge[maxm], head[maxn], to[maxm], Next[maxm], d[maxn];
 bool v[maxn];
-priority_queue< pair<int, int> > q;
+queue<int> q;
 
 inline void addline(int x, int y, int z) {
   edge[++idx] = z, to[idx] = y, Next[idx] = head[x], head[x] = idx;
 }
 
-inline int dijkstra() {
+inline int SPFA() {
   fill(d, d + n + 1, 1e18);
   memset(v, 0, sizeof(v));
-  d[s] = 0; q.push(make_pair(0, s));
+  d[s] = 0; q.push(s); v[s] = 1; // v[s] = 1 means point s is in the queue
   while (q.size()) {
-    int x = q.top().second; q.pop();
-    if (v[x]) continue; // v[x] means we have used x to update other d[to]
-    v[x] = 1;
+    int x = q.front(); q.pop();
+    v[x] = 0;
     for (int i = head[x]; i; i = Next[i]) {
       int y = to[i], z = edge[i];
       if (d[y] > d[x] + z) {
         d[y] = d[x] + z;
-        q.push(make_pair(-d[y], y));
+        q.push(y); v[y] = 1;
       }
     }
   }
@@ -42,6 +41,5 @@ signed main() {
     scanf("%lld %lld %lld", &x, &y, &z);
     addline(x, y, z), addline(y, x, z);
   }
-  printf("%lld", dijkstra());
+  printf("%lld", SPFA());
 }
-
