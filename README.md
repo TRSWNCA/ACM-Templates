@@ -5,14 +5,13 @@
 ## 目录
 
 ```
-ACM - Templates
-
-.
+ACM-Templates
 ├── Data Structure
 │   └── Trie.cc
 ├── Graph Theory
 │   ├── Dijkstra.cc
 │   └── SPFA.cc
+├── modify.py
 ├── README.md
 ├── String Algorithm
 │   └── kmp.cc
@@ -20,4 +19,5 @@ ACM - Templates
 └── Tricks
     └── fread.cc
 
+4 directories, 8 files
 ```
