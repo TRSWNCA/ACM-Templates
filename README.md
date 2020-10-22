@@ -11,6 +11,8 @@ ACM-Templates
 ├── Graph Theory
 │   ├── Dijkstra.cc
 │   └── SPFA.cc
+├── Mathematics
+│   └── Sieve_prime.cc
 ├── modify.py
 ├── README.md
 ├── String Algorithm
@@ -19,5 +21,5 @@ ACM-Templates
 └── Tricks
     └── fread.cc
 
-4 directories, 8 files
+5 directories, 9 files
 ```
