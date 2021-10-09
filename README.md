@@ -30,22 +30,28 @@ $ ./submit.sh
 
 ```
 ACM-Templates
-├── Data Structure
-│   └── Trie.cc
-├── Graph Theory
-│   ├── Dijkstra.cc
-│   └── SPFA.cc
-├── Mathematics
-│   ├── Sieve_euler.cc
-│   ├── Sieve_mu.cc
-│   └── Sieve_prime.cc
-├── modify.py
-├── README.md
-├── String Algorithm
-│   └── kmp.cc
-├── submit.sh
-└── Tricks
-    └── fread.cc
+|-- Data\ Structure
+|   |-- AC_Automaton.cc
+|   |-- SegmentTreeBeats.cc
+|   `-- Trie.cc
+|-- Graph\ Theory
+|   |-- Dijkstra.cc
+|   `-- SPFA.cc
+|-- Mathematics
+|   |-- Comb.cc
+|   |-- Sieve_euler.cc
+|   |-- Sieve_mu.cc
+|   |-- Sieve_prime.cc
+|   `-- millerrabin.cc
+|-- README.md
+|-- String\ Algorithm
+|   `-- kmp.cc
+|-- Tricks
+|   `-- fread.cc
+|-- algorithm.vim
+|-- astyle
+|-- modify.py
+`-- submit.sh
 
-5 directories, 11 files
+5 directories, 17 files
 ```
