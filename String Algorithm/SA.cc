@@ -35,3 +35,29 @@ int main() {
   }
   rep (i, 1, n) if (sa[i] <= (n >> 1)) putchar(s[sa[i] + (n >> 1) - 1]);
 }
+
+/*
+ * max length of subarray that occurs K times
+ * array is number
+ */
+int n, ht[N], q[N], K;
+int s[N];
+
+int main() {
+  int i, m = N, w, p;
+  scanf("%d %d", &n, &K); K --;
+  rep(i, 1, n) scanf("%d", s + i);
+  for (int i = 1, k = 0; i <= n; ++i) { // calc height[]
+    if (k) --k;
+    while (s[i + k] == s[sa[rk[i] - 1] + k]) ++k;
+    ht[rk[i]] = k;
+  }
+  int ans = 0;
+  rep(i, 1, n) {
+    while (l <= r && ht[q[r]] >= ht[i]) r --;
+    q[++r] = i;
+    while (q[l] <= i - K) l ++;
+    ans = max(ans, ht[q[l]]);
+  }
+  printf("%d", ans);
+}
